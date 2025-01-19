@@ -1,44 +1,24 @@
 public class Main {
     public static void main(String[] args) {
-
-        Product product1 = new Product(1, "Laptop", 1200.50);
-        Product product2 = new Product(2, "Smartphone", 800.75);
-        Product product3 = new Product(3, "Headphones", 150.30);
+        Company company = new Company();
 
 
-        Store store = new Store("TechStore");
-        store.addProduct(product1);
-        store.addProduct(product2);
-        store.addProduct(product3);
+        Manager manager = new Manager("Alice", 1, 5000, "HR");
+        Engineer engineer = new Engineer("Bob", 2, 4000, "Software Development");
+
+        company.addEmployee(manager);
+        company.addEmployee(engineer);
 
 
-        store.listProducts();
+        System.out.println("List of employees:");
+        company.listEmployees();
 
 
-        Customer customer = new Customer("John");
+        System.out.println("\nRemoving employee with ID 1...");
+        company.removeEmployee(1);
 
 
-        customer.addToCart(product1);
-        customer.addToCart(product2);
-
-
-        customer.checkout();
-
-
-        customer.removeFromCart(2);
-
-
-        customer.checkout();
-
-
-        store.removeProduct(3);
-
-
-        store.listProducts();
+        System.out.println("\nList of employees after removal:");
+        company.listEmployees();
     }
 }
-
-
-
-
-
