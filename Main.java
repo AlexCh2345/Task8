@@ -20,5 +20,29 @@ public class Main {
 
         System.out.println("\nList of employees after removal:");
         company.listEmployees();
+
+        PetStore petStore = new PetStore();
+
+
+        Dog dog = new Dog("Buddy", 3, "Labrador");
+        Cat cat = new Cat("Whiskers", 2, "Gray");
+
+
+        petStore.addAnimal(dog);
+        petStore.addAnimal(cat);
+
+
+        petStore.customizeAnimalInfo("Buddy", "Loves to fetch balls");
+
+
+        System.out.println("List of animals in the store:");
+        petStore.listAnimals();
+
+
+        petStore.removeAnimal("Whiskers");
+
+
+        System.out.println("\nList of animals after removing Whiskers:");
+        petStore.listAnimals();
     }
 }
